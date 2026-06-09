@@ -16,4 +16,7 @@ export const certifications = [
   { icon: '🗄️', name: 'SQL Server Foundations',             issuer: 'ScholarHat',          date: 'Apr 2026', color: '#00F5D4', year: 2026 },
   { icon: '🌐', name: 'ASP.NET MVC with Web API Foundations',issuer: 'ScholarHat',          date: 'Apr 2026', color: '#00C6FF', year: 2026 },
   { icon: '🤖', name: 'BankBot AI Project Certificate',      issuer: 'Infosys Springboard', date: 'Coming Soon', color: '#7B61FF', year: 2026, pending: true },
+  // Documents
+  { icon: '📋', name: 'Academic Marksheet — Sem 1 to 6', issuer: 'Punyashlok Ahilyadevi Holkar Solapur University', date: 'Mar 2026', color: '#00C6FF', year: 2026, isDocument: true, docUrl: '/my-portfolio/marksheet.pdf', docLabel: 'View Marksheet'},
+  { icon: '🎓', name: 'B.Sc (ECS) Computer Science — Degree Certificate', issuer: 'Punyashlok Ahilyadevi Holkar Solapur University', date: 'Coming Soon', color: '#00F5D4', year: 2026, isDocument: true, docUrl: null, docLabel: 'Coming Soon', pending: true},
 ]

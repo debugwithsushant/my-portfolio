@@ -1,11 +1,11 @@
 export default function About() {
   const facts = [
-    { icon: '🎓', label: '9.21 CGPA',            value: 'B.Sc ECS CS · 2026' },
+    { icon: '🎓', label: '9.04 CGPA',            value: 'B.Sc ECS · 2026' },
     { icon: '☁️', label: 'Azure AZ-900',          value: 'Certified · Jan 2026' },
     { icon: '💼', label: '5 Internships',         value: 'Infosys×2 · Axcentra · Cognifyz · VaultofCodes' },
     { icon: '🏆', label: 'TCS NQT 82.59%',        value: 'Aug 2025' },
     { icon: '📍', label: 'Sangola, Maharashtra',  value: 'India' },
-    { icon: '🌐', label: 'Open to Work',          value: 'Remote · Hybrid · On-site' },
+    { icon: '🌐', label: 'Open to Work',          value: 'On-site · Hybrid · Remote' },
   ]
 
   /* Words to highlight in primary color */
@@ -23,7 +23,7 @@ export default function About() {
 
   const paragraphs = [
     'My journey into technology began in 2023 when I enrolled in B.Sc Computer Science at Sangola Mahavidyalaya. What started as curiosity about C and C++ quickly became a deep passion for building software and solving real-world problems through code.',
-    'Over three years I expanded into Java, Python, Full Stack Development, REST APIs, Databases, Cloud with Azure, and Artificial Intelligence — completing 15+ certifications and 5 internships along the way.',
+    'Over three years I expanded into Java, Python, Full Stack Development, REST APIs, Databases, Cloud with Azure and Artificial Intelligence — completing 15+ certifications and 5 internships along the way.',
     'Today I build everything from AI-powered banking chatbots to full-stack crypto platforms. I am actively seeking my first full-time Software Developer role where I can contribute from day one and grow fast.',
   ]
 

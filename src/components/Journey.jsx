@@ -2,7 +2,7 @@ const timelineData = [
   {
     year: '2023',
     title: 'Started Programming',
-    desc: 'Enrolled in B.Sc CS at Sangola Mahavidyalaya. First programs in C and C++. Built logic, learned algorithms, discovered the joy of building with code.',
+    desc: 'Enrolled in B.Sc ECS at Sangola Mahavidyalaya. First programs in C and C++. Built logic, learned algorithms, discovered the joy of building with code.',
     color: '#00C6FF',
   },
   {

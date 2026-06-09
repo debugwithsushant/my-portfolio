@@ -37,7 +37,7 @@ export const achievements = [
   },
   {
     emoji: '🎓',
-    title: '9.21 CGPA — Academic Excellence',
+    title: '9.04 CGPA — Academic Excellence',
     sub: 'B.Sc ECS CS · Sangola Mahavidyalaya · 2023–2026',
     date: '2026',
   },

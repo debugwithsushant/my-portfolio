@@ -104,7 +104,7 @@ export default function Footer() {
             📅 View LinkedIn
           </a>
           <a
-            href="/my-portfolio/resume.pdf"
+            href="/my-portfolio/resume1.pdf"
             download
             className="btn-primary"
           >

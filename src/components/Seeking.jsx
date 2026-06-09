@@ -7,9 +7,9 @@ export default function Seeking() {
   ]
 
   const workModes = [
-    { icon: '🌐', mode: 'Remote',   badge: 'Preferred', color: '#00F5D4' },
+    { icon: '🏢', mode: 'On-site',  badge: 'Preferred',   color: '#00F5D4' },
     { icon: '🔄', mode: 'Hybrid',   badge: 'Open to',   color: '#00C6FF' },
-    { icon: '🏢', mode: 'On-site',  badge: 'Open to',   color: '#00C6FF' },
+    { icon: '🌐', mode: 'Remote',   badge: 'Open to', color: '#00C6FF' },
   ]
 
   return (

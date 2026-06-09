@@ -88,7 +88,7 @@ export default function Contact() {
           Get In <span className="gradient-text">Touch</span>
         </h2>
         <p style={{ color: 'var(--muted)', marginBottom: '16px' }}>
-          Open to Software Developer roles — Remote · Hybrid · On-site
+          Open to Software Developer roles — On-site · Hybrid · Remote
         </p>
         <div className="section-divider" />
 

@@ -3,7 +3,7 @@ const cards = [
     icon: '🎓',
     color: '#00C6FF',
     title: 'Strong Academic Performance',
-    desc: '9.21 CGPA in B.Sc Computer Science. Consistent top performance demonstrating discipline, focus, and intellectual capability across 3 years.',
+    desc: '9.04 CGPA in B.Sc Computer Science. Consistent top performance demonstrating discipline, focus, and intellectual capability across 3 years.',
   },
   {
     icon: '💻',
