@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Variables ──────────────────────────── */
+:root {
+  --bg:           #050816;
+  --bg2:          #070b1a;
+  --primary:      #00C6FF;
+  --secondary:    #7B61FF;
+  --accent:       #00F5D4;
+  --text:         #FFFFFF;
+  --muted:        #A9A9B3;
+  --glass-bg:     rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(0, 198, 255, 0.15);
+}
+
+/* Light mode — applied when html has data-theme="light" */
+[data-theme="light"] {
+  --bg:           #f0f4ff;
+  --bg2:          #e8eeff;
+  --text:         #0a0f22;
+  --muted:        #5a6080;
+  --glass-bg:     rgba(0, 0, 0, 0.04);
+  --glass-border: rgba(0, 198, 255, 0.3);
+}
+
+/* ── Reset ──────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+::selection { background: #00C6FF; color: #000; }
+
+/* ── Scrollbar ──────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #00C6FF; border-radius: 2px; }
+
+/* ── Glass Card ─────────────────────────────── */
+/* Use className="glass-card" on any card div    */
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.glass-card:hover {
+  border-color: rgba(0, 198, 255, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 30px rgba(0,198,255,0.15);
+}
+
+/* ── Gradient Text ──────────────────────────── */
+/* Use className="gradient-text" on any span     */
+.gradient-text {
+  background: linear-gradient(135deg, #00C6FF, #7B61FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Section Label ──────────────────────────── */
+/* Small "01 / About" label above section title  */
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #00C6FF;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* ── Section Title ──────────────────────────── */
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+/* ── Section Divider ────────────────────────── */
+/* Small colored line below section title        */
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #00C6FF, #7B61FF);
+  border-radius: 2px;
+  margin-bottom: 60px;
+}
+
+/* ── Scroll Reveal ──────────────────────────── */
+/* Add className="reveal" to section wrappers.   */
+/* App.jsx adds "visible" via IntersectionObserver */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Primary Button ─────────────────────────── */
+.btn-primary {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #00C6FF, #7B61FF);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.btn-primary:hover { opacity: 0.88; transform: translateY(-2px); }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+/* ── Outline Button ─────────────────────────── */
+.btn-outline {
+  padding: 12px 28px;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.3s, color 0.3s, transform 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.btn-outline:hover { border-color: #00C6FF; color: #00C6FF; transform: translateY(-2px); }
+
+/* ── Layout ─────────────────────────────────── */
+.section  { padding: 100px 0; position: relative; z-index: 1; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+
+/* ── Animations ─────────────────────────────── */
+
+/* Profile photo float up-down */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-16px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+/* Photo ring spin */
+@keyframes spin-ring {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Typewriter cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.cursor-blink {
+  display: inline-block;
+  width: 3px;
+  height: 1.1em;
+  background: #00C6FF;
+  margin-left: 3px;
+  vertical-align: text-bottom;
+  animation: blink 0.8s step-end infinite;
+}
+
+/* Availability badge green dot pulse */
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.5); opacity: 0.6; }
+}
+.pulse-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* ── Mobile ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .hide-mobile  { display: none !important; }
+  .show-mobile  { display: flex !important; }
+  .container    { padding: 0 20px; }
+  .section      { padding: 70px 0; }
+  .section-title { font-size: 1.8rem !important; }
+  .section-divider { margin-bottom: 40px; }
+}
+
+/* ── Hero ───────────────────────────────── */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 40px !important;
+  }
+  .hero-grid > div:first-child { order: 1; }
+  .hero-grid > div:last-child  { order: 2; }
+  .hero-grid > div:last-child {
+    align-items: center !important;
+  }
+  .animate-float {
+    width: 240px !important;
+    height: 240px !important;
+  }
+}
+
+/* ── Seeking ────────────────────────────── */
+@media (max-width: 768px) {
+  .seeking-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── About ──────────────────────────────── */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+}
+
+/* ── Journey timeline ───────────────────── */
+@media (max-width: 768px) {
+  .timeline-line { left: 16px !important; }
+}
+
+/* ── Experience ─────────────────────────── */
+@media (max-width: 768px) {
+  .exp-line { display: none !important; }
+  .exp-row  {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+  .exp-row > div:nth-child(1) { text-align: left !important; }
+  .exp-row > div:nth-child(2) { display: none !important; }
+}
+
+/* ── Projects grid ──────────────────────── */
+@media (max-width: 600px) {
+  #projects .container > div {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── GitHub ─────────────────────────────── */
+@media (max-width: 900px) {
+  .github-top  { grid-template-columns: 1fr !important; }
+  .repos-grid  { grid-template-columns: 1fr !important; }
+}
+
+/* ── Contact ────────────────────────────── */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Footer CTA ─────────────────────────── */
+@media (max-width: 768px) {
+  #footer-cta { padding: 40px 20px !important; }
+}
+
+/* ── General touch targets ──────────────── */
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-outline {
+    min-height: 44px;
+    padding: 12px 20px;
+  }
+  button { min-height: 44px; }
+}
+
+/* Hero right column — center on mobile */
+@media (max-width: 900px) {
+  .hero-right {
+    align-items: center !important;
+  }
+  .hero-right p {
+    text-align: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* ── Light mode card visibility ─────────── */
+[data-theme="light"] .glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] body {
+  background-color: #f0f4ff;
+}
+
+[data-theme="light"] .gradient-text {
+  background: linear-gradient(135deg, #0088cc, #5533cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
