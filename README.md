@@ -200,19 +200,6 @@ RESTful Web API for managing student records and authentication.
 
 ---
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=debugwithsushant\&show_icons=true\&theme=tokyonight)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=debugwithsushant\&layout=compact\&theme=tokyonight)
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=debugwithsushant\&theme=tokyonight)
-
-</div>
-
----
 
 ## 🌐 Connect With Me
 

@@ -12,7 +12,7 @@ export const techStack = [
   {
     category: 'Backend',
     color: '#7B61FF',
-    chips: ['Spring Boot', 'ASP.NET Core', 'Node.js', 'Express.js', 'REST APIs', 'Hibernate', 'JDBC', 'Entity Framework Core'],
+    chips: ['Spring Boot', 'ASP.NET Core', 'Node.js', 'REST APIs', 'Hibernate', 'JDBC', 'Entity Framework Core'],
   },
   {
     category: 'Databases',

@@ -5,7 +5,7 @@ const FALLBACK_REPOS = [
   { name: 'StudentManagementSystem',        description: 'ASP.NET Core API with EF Core + SQL Server + Swagger',  language: 'C#',         stargazers_count: 2, html_url: 'https://github.com/debugwithsushant/StudentManagementSystem' },
   { name: 'Cognifyz-Java-Internship',       description: 'Core Java internship — OOP, multithreading',            language: 'Java',       stargazers_count: 2, html_url: 'https://github.com/debugwithsushant/Cognifyz-Java-Internship' },
   { name: 'LeetCode-Coding-Problem-Solving',description: 'LeetCode solutions in Java — DSA journey',             language: 'Java',       stargazers_count: 1, html_url: 'https://github.com/debugwithsushant/LeetCode-Coding-Problem-Solving' },
-  { name: 'Bank',                           description: 'BankBot AI — Python Streamlit Ollama NLP chatbot',      language: 'Python',     stargazers_count: 1, html_url: 'https://github.com/debugwithsushant/Bank' },
+  { name: 'BankBot-AI',                           description: 'BankBot AI — Python Streamlit Ollama NLP chatbot',      language: 'Python',     stargazers_count: 1, html_url: 'https://github.com/debugwithsushant/BankBot-AI' },
   { name: 'Food-delivery-website',          description: 'Responsive food delivery website frontend',              language: 'HTML',       stargazers_count: 1, html_url: 'https://github.com/debugwithsushant/Food-delivery-website' },
 ]
 

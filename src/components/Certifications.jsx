@@ -92,13 +92,29 @@ function YearGroup({ year, certs }) {
 
 /* Regular cert card */
 function CertCard({ cert }) {
-  return (
+  const cardContent = (
     <div className="glass-card" style={{
       padding:    '20px',
       display:    'flex',
       alignItems: 'flex-start',
       gap:        '16px',
-    }}>
+      cursor:     cert.link ? 'pointer' : 'default',
+      transition: 'border-color 0.3s, transform 0.3s, box-shadow 0.3s',
+    }}
+      onMouseEnter={(e) => {
+        if (cert.link) {
+          e.currentTarget.style.borderColor = cert.color
+          e.currentTarget.style.transform   = 'translateY(-4px)'
+          e.currentTarget.style.boxShadow   = `0 12px 30px ${cert.color}25`
+        }
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderColor = 'var(--glass-border)'
+        e.currentTarget.style.transform   = 'translateY(0)'
+        e.currentTarget.style.boxShadow   = 'none'
+      }}
+    >
+      {/* Icon circle */}
       <div style={{
         width:          '42px',
         height:         '42px',
@@ -114,6 +130,7 @@ function CertCard({ cert }) {
         {cert.icon}
       </div>
 
+      {/* Text */}
       <div style={{ flex: 1 }}>
         <p style={{
           fontFamily:   'Syne, sans-serif',
@@ -133,6 +150,8 @@ function CertCard({ cert }) {
         }}>
           {cert.issuer} · {cert.date}
         </p>
+
+        {/* Pending badge */}
         {cert.pending && (
           <span style={{
             fontFamily:   'JetBrains Mono, monospace',
@@ -146,9 +165,41 @@ function CertCard({ cert }) {
             🔜 Coming Soon
           </span>
         )}
+
+        {/* View certificate link */}
+        {cert.link && !cert.pending && (
+          <span style={{
+            fontFamily:   'JetBrains Mono, monospace',
+            fontSize:     '0.68rem',
+            color:        cert.color,
+            display:      'inline-flex',
+            alignItems:   'center',
+            gap:          '4px',
+            marginTop:    '4px',
+          }}>
+            View Certificate →
+          </span>
+        )}
       </div>
     </div>
   )
+
+  /* If link exists — wrap in anchor tag */
+  if (cert.link) {
+    return (
+      <a
+        href={cert.link}
+        target="_blank"
+        rel="noreferrer"
+        style={{ textDecoration: 'none' }}
+      >
+        {cardContent}
+      </a>
+    )
+  }
+
+  /* No link — plain div */
+  return cardContent
 }
 
 /* Document card — bigger, with View button */
