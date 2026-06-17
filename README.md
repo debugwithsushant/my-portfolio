@@ -209,7 +209,7 @@ RESTful Web API for managing student records and authentication.
 
 🐙 GitHub: https://github.com/debugwithsushant
 
-🌍 Portfolio: https://debugwithsushant.dev
+🌍 Portfolio: [https://debugwithsushant.dev](https://debugwithsushant.github.io/my-portfolio/)
 
 📍 Sangola, Solapur, Maharashtra, India
 
