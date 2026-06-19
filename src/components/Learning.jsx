@@ -1,17 +1,12 @@
 const learningAreas = [
   { name: 'Data Analytics',        icon: '📊', tag: 'Exploring',   color: '#00C6FF' },
-  { name: 'Business Intelligence', icon: '📈', tag: 'Beginner',    color: '#7B61FF' },
   { name: 'Azure Cloud',           icon: '☁️', tag: 'Advancing',   color: '#00F5D4' },
-  { name: 'Cloud Support',         icon: '🔧', tag: 'Exploring',   color: '#00C6FF' },
   { name: 'Docker',                icon: '🐳', tag: 'Beginner',    color: '#7B61FF' },
-  { name: 'DevOps',                icon: '⚙️', tag: 'Exploring',   color: '#00F5D4' },
   { name: 'AI Engineering',        icon: '🤖', tag: 'In Progress', color: '#00C6FF' },
   { name: 'Machine Learning',      icon: '🧠', tag: 'Exploring',   color: '#7B61FF' },
   { name: 'Cybersecurity',         icon: '🔐', tag: 'Interested',  color: '#00F5D4' },
   { name: 'SOC Operations',        icon: '🛡️', tag: 'Exploring',   color: '#00C6FF' },
   { name: 'LLM Applications',      icon: '💬', tag: 'In Progress', color: '#7B61FF' },
-  { name: 'RAG Architecture',      icon: '🔍', tag: 'Exploring',   color: '#00F5D4' },
-  { name: 'System Design',         icon: '🏗️', tag: 'Learning',    color: '#00C6FF' },
   { name: 'Appwrite',              icon: '📦', tag: 'Beginner',    color: '#7B61FF' },
 ]
 
