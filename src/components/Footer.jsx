@@ -79,7 +79,7 @@ export default function Footer() {
           letterSpacing: '-0.03em',
           marginBottom:  '12px',
         }}>
-          <span className="gradient-text">Looking for a Software Developer?</span>
+          <span className="gradient-text">Looking for a IT Role...</span>
         </h2>
         <p style={{
           fontFamily:   'DM Sans, sans-serif',
@@ -104,7 +104,7 @@ export default function Footer() {
             📅 View LinkedIn
           </a>
           <a
-            href="/my-portfolio/resume1.pdf"
+            href="/my-portfolio/resume.pdf"
             download
             className="btn-primary"
           >

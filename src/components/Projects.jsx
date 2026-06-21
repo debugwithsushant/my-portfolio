@@ -177,7 +177,7 @@ function ProjectCard({ project }) {
           >
             ⌥ GitHub
           </a>
-          {project.demo ? (
+          {project.demo && (
             <a
               href={project.demo}
               target="_blank"
@@ -187,20 +187,6 @@ function ProjectCard({ project }) {
             >
               ↗ Live Demo
             </a>
-          ) : (
-            <button
-              disabled
-              className="btn-primary"
-              style={{
-                flex: 1,
-                justifyContent: 'center',
-                padding: '10px',
-                opacity: 0.4,
-                cursor: 'not-allowed',
-              }}
-            >
-              ↗ Demo Soon
-            </button>
           )}
         </div>
       </div>

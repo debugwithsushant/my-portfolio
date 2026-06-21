@@ -16,7 +16,6 @@ import Achievements   from './components/Achievements'
 import CodingProfiles from './components/CodingProfiles'
 import Learning       from './components/Learning'
 import GitHubSection  from './components/GitHubSection'
-import Blogs          from './components/Blogs'
 import Contact        from './components/Contact'
 
 /* All sections rendered in order on home page */
@@ -36,7 +35,6 @@ function Home() {
       <CodingProfiles />
       <Learning />
       <GitHubSection />
-      <Blogs />
       <Contact />
     </main>
   )

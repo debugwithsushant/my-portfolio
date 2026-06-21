@@ -83,7 +83,7 @@ export default function Contact() {
     <section id="contact" className="section reveal">
       <div className="container">
 
-        <span className="section-label">15 / Contact</span>
+        <span className="section-label">14 / Contact</span>
         <h2 className="section-title">
           Get In <span className="gradient-text">Touch</span>
         </h2>
