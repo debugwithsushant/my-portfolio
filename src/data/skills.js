@@ -30,6 +30,11 @@ export const techStack = [
     chips: ['Microsoft Azure (AZ-900)', 'AWS Basics'],
   },
   {
+    category: 'Testing & Automation',
+    color: '#7B61FF',
+    chips: ['Playwright', 'TypeScript', 'API Testing', 'Page Object Model', 'GitHub Actions CI/CD'],
+  },
+  {
     category: 'DevOps & Tools',
     color: '#00C6FF',
     chips: ['Git', 'GitHub', 'Docker (Beginner)', 'Postman', 'IntelliJ IDEA', 'VS Code', 'Linux', 'Appwrite (Beginner)'],
